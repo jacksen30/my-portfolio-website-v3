@@ -92,25 +92,136 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Manrope', sans-serif;
+  background-color: #121212;
 }
 
 /* Divs, Containers & buttons - Reusable */
 .main {
   flex-direction: column;
+  max-width: 80%;
 }
 
 .container {
   width: 85%;
 }
 
-.flex {
+/* .flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 section {
   padding: 2rem 0;
+}
+
+/* REFACTOR LATER */
+
+.row {
+  display: flex;
+  /* max-width: 80%; */
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  width: 100vw;
+}
+
+.header nav {
+  width: 80%;
+  /* margin: 0 auto; */
+}
+
+nav.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 5px 20px;
+    background-color: #16AA2D;
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.avatar-img {
+  /* width: 393px;
+  height: 393px; */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  /* height: 300px; */
+  background-color: #0D0D0D;
+  /* margin-right: 20px; */
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+  padding: 15px;
+}
+
+.hero-box-1 {
+  flex: 0.3;
+}
+
+.hero-box-2 {
+  flex: 1;
+  /* max-width: 562px; */
+  /* padding: 25px; */
+  color: #C9C9CB;
+}
+
+.row-2 {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.box-stats-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.inner-box {
+  background-color: #121212;
+  /* margin: 0px 10px; */
+  padding: 10px 10px;
+  max-width: 100px;
+  border-radius: 10px;
+  min-height: 100px; /* used just to try get inital sizes right for its parent div */
+}
+
+.social-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.social-inner-box {
+  background-color: #0D0D0D;
+  padding: 10px 30px;
+  min-width: 200px;
+  border-radius: 15px;
 }
