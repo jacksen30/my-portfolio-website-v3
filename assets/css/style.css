@@ -87,6 +87,24 @@ select {
   --color3: #808080;      /* Card Text */
 }
 
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -135,8 +153,14 @@ section {
   width: 100vw;
 }
 
+nav {
+  width: 100%;
+  max-width: 335px;
+}
+
 .nav-list {
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 nav ul {
