@@ -82,27 +82,9 @@ select {
 
 /* Reusable Custom CSS Variables */
 :root {
-  --color1: #16AA2D;      /* Button Background */
-  --color2: #303030;      /* Card Title */
-  --color3: #808080;      /* Card Text */
-}
-
-.inter-400 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
-}
-
-.inter-600 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  --darkmode_highlight: #738BF7;
+  --darkmode_page-background: #121212;
+  --darkmode_section-background: #0D0D0D;
 }
 
 html {
@@ -113,8 +95,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Manrope', sans-serif;
-  background-color: #121212;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: var(--darkmode_page-background);
 }
 
 /* Divs, Containers & buttons - Reusable */
@@ -153,6 +137,15 @@ section {
   width: 100vw;
 }
 
+.brandname {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.brandname__colored {
+  color: var(--darkmode_highlight);
+}
+
 nav {
   width: 100%;
   max-width: 335px;
@@ -170,7 +163,7 @@ nav ul {
 nav ul li {
     list-style: none;
     padding: 5px 10px;
-    background-color: #16AA2D;
+    background-color: var(--darkmode_section-background);
     border-radius: 100px;
 
 }
@@ -178,29 +171,27 @@ nav ul li {
 nav ul li a {
     list-style: none;
     text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.nav__current-tab {
+  background: var(--darkmode_highlight);
+  color: var(--darkmode_section-background);
 }
 
 .avatar-img {
   border-radius: 8px;
-  /* width: 393px; */
-  /* height: 393px; */
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  /* height: 300px; */
-  background-color: #0D0D0D;
-  /* margin-right: 20px; */
+  background-color: var(--darkmode_section-background);
   margin-bottom: 20px;
   border-radius: 20px;
-
   padding: 15px;
 }
-
-/* .hero-box-1 {
-
-} */
 
 .hero-box-2 {
   color: #C9C9CB;
@@ -218,8 +209,7 @@ nav ul li a {
 }
 
 .inner-box {
-  background-color: #121212;
-  /* margin: 0px 10px; */
+  background-color: var(--darkmode_page-background);
   padding: 10px 10px;
   max-width: 100px;
   border-radius: 10px;
@@ -231,12 +221,14 @@ nav ul li a {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .social-inner-box {
-  background-color: #0D0D0D;
+  background-color: var(--darkmode_section-background);
   padding: 10px 30px;
-  min-width: 200px;
+  margin-bottom: 10px;
+  min-width: 160px;
   border-radius: 15px;
 }
 
