@@ -116,6 +116,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   width: 85%;
   margin: auto;
 }
@@ -149,6 +150,7 @@ section {
 nav {
   width: 100%;
   max-width: 335px;
+  margin: 20px 0px;
 }
 
 .nav-list {
@@ -178,6 +180,16 @@ nav ul li a {
 .nav__current-tab {
   background: var(--darkmode_highlight);
   color: var(--darkmode_section-background);
+}
+
+.light-dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkmode_section-background);
+  width: 34px;
+  height: 34px;
+  border-radius: 20px;
 }
 
 .avatar-img {
@@ -225,12 +237,36 @@ nav ul li a {
 }
 
 .social-inner-box {
+  display: flex;
   background-color: var(--darkmode_section-background);
   padding: 10px 30px;
   margin-bottom: 10px;
   min-width: 160px;
   border-radius: 15px;
 }
+
+.social-inner-box i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+i.fa-linkedin {
+  color: #0A66C2;
+}
+
+i.fa-square-instagram {
+  background: linear-gradient(to top, #FED576, #f47133, #bc3081, #4c63d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text itself transparent, showing the background */
+  display: inline-block; /* Needed to apply the gradient correctly */
+}
+
+.social-inner-box.fe-mentors {
+  width: 100%;
+  max-width: 386px;
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -239,6 +275,10 @@ nav ul li a {
     flex-direction: row;
     align-items: space-between;
     justify-content: space-between;
+  }
+
+  nav {
+    margin: 0px; /* resets what was set in mobile first */
   }
 
   .light-dark-mode-toggle {
