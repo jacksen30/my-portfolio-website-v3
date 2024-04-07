@@ -96,8 +96,8 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: #FFFFFF;
+  /* font-weight: 400; */
+  color: #FFF;
   background-color: var(--darkmode_page-background);
 }
 
@@ -107,7 +107,7 @@ body {
   max-width: 100%;
 }
 
-.container {
+.row {
   width: 85%;
   margin: auto;
 }
@@ -121,13 +121,17 @@ body {
   margin: auto;
 }
 
-section {
-  padding: 2rem 0;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darkmode_section-background);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 15px;
 }
 
-.row {
-  display: flex;
-  gap: 20px;
+section {
+  padding: 2rem 0;
 }
 
 .header {
@@ -173,7 +177,7 @@ nav ul li {
 nav ul li a {
     list-style: none;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #FFF;
     font-weight: 500;
 }
 
@@ -196,26 +200,7 @@ nav ul li a {
   border-radius: 8px;
 }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--darkmode_section-background);
-  margin-bottom: 20px;
-  border-radius: 20px;
-  padding: 15px;
-}
-
-.hero-box-2 {
-  color: #C9C9CB;
-}
-
-.row-2 {
-  width: 100%;
-  justify-content: space-between;
-}
-
 .box-stats-wrapper {
-  display: flex;
   flex-direction: row;
   gap: 10px;
 }
@@ -270,7 +255,7 @@ i.fa-square-instagram {
 
 @media screen and (min-width: 1024px) {
 
-  .flex {
+  .row {
     display: flex;
     flex-direction: row;
     align-items: space-between;
@@ -292,15 +277,9 @@ i.fa-square-instagram {
     margin-right: 50px;
   }
 
-.hero-box-2 {
-  flex: 1;
-  /* max-width: 562px; */
-  padding: 25px;
-}
-
-.avatar-img {
-  border-radius: 8px;
-  /* max-width: 300px; */
-}
-
+  .hero-box-2 {
+    flex: 1;
+    /* max-width: 562px; */
+    padding: 25px;
+  }
 }
