@@ -213,6 +213,23 @@ nav ul li a {
   min-height: 100px; /* used just to try get inital sizes right for its parent div */
 }
 
+.github-stats-wrapper {
+  padding:10px;
+  background-color: var(--darkmode_section-background);
+  /* background-image: ; */
+}
+
+.github-stats-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  max-height:150px;
+  object-fit: cover; /* Adjust how the content of replaced elements, like <img>, should be resized. */
+  
+  /* width: 90%; */
+  /* height: 150px; */
+  border-radius: 10px;
+}
+
 .social-row {
   display: flex;
   flex-direction: row;
