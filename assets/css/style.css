@@ -224,10 +224,16 @@ nav ul li a {
   max-width: 100%;
   max-height:150px;
   object-fit: cover; /* Adjust how the content of replaced elements, like <img>, should be resized. */
-  
-  /* width: 90%; */
-  /* height: 150px; */
   border-radius: 10px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .social-row {
