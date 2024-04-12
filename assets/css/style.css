@@ -82,11 +82,21 @@ select {
 
 /* Reusable Custom CSS Variables */
 :root {
+  /* Dark Mode (Default) - Theme Colors */
   /* --darkmode_highlight: #738BF7; */
   /* --darkmode_highlight: #0066ff; */
   --darkmode_highlight: #339900;
   --darkmode_page-background: #121212;
   --darkmode_section-background: #0D0D0D;
+
+  /* Light Mode - Theme Colors */
+  --light-mode_highlight: #339900;
+  --light-mode_page-background: #F7F9FC;
+  --light-mode_section-background: #FFF;
+
+
+  /* Miscellaneous - Colors */
+  --color-black: #000;
 }
 
 html {
@@ -99,9 +109,20 @@ body {
   align-items: center;
   font-family: "Inter", sans-serif;
   /* font-weight: 400; */
+
   color: #FFF;
   background-color: var(--darkmode_page-background);
 }
+
+body.light-theme{
+  color: #000000;
+  background-color: var(--light-mode_page-background);
+}
+
+/* .light-theme {
+  color: #000000;
+  background-color: #F7F9FC;
+} */
 
 /* Divs, Containers & buttons - Reusable */
 .main {
@@ -132,10 +153,16 @@ body {
   padding: 15px;
 }
 
+.wrapper.light-theme {
+  background-color: var(--light-mode_section-background);
+}
+
 .wrapper a {
   text-decoration: none;
   color: inherit;
 }
+
+
 
 section {
   padding: 2rem 0;
@@ -185,6 +212,15 @@ nav ul li {
 
 }
 
+nav ul li.light-theme {
+  background-color: var(--light-mode_section-background);
+}
+
+/* Ensures .nav .current-tab background-color wont be overwritten when theme is toggled to Light-Mode */
+nav ul li.nav__current-tab.light-theme {
+  background: var(--darkmode_highlight);
+}
+
 nav ul li a {
     list-style: none;
     text-decoration: none;
@@ -192,12 +228,20 @@ nav ul li a {
     font-weight: 500;
 }
 
+nav ul li a.light-theme {
+  color: var(--color-black);
+}
+
 .nav__current-tab {
   background: var(--darkmode_highlight);
   color: var(--darkmode_section-background);
 }
 
-.light-dark-mode-toggle {
+/* nav ul li a.nav__current-tab {
+  background: var(--darkmode_highlight);
+} */
+
+.dark-mode-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,6 +249,10 @@ nav ul li a {
   width: 34px;
   height: 34px;
   border-radius: 20px;
+}
+
+.dark-mode-toggle.light-theme {
+  background-color: var(--light-mode_section-background);
 }
 
 .avatar-img {
@@ -230,6 +278,10 @@ nav ul li a {
   background-color: var(--darkmode_page-background);
   padding: 10px 10px;
   border-radius: 10px;
+}
+
+.inner-box.light-theme {
+  background-color: var(--light-mode_page-background);
 }
 
 .wrapper .inner-box {
@@ -289,6 +341,11 @@ nav ul li a {
   border-radius: 15px;
 }
 
+.social-inner-box.light-theme {
+  background-color: var(--light-mode_section-background);
+}
+
+
 .social-inner-box i {
   font-size: 1.5rem;
   margin-right: 0.5rem;
@@ -313,7 +370,7 @@ i.fa-square-instagram {
 
 
 @media screen and (min-width: 545px) {
-  .light-dark-mode-toggle {
+  .dark-mode-toggle {
     order: 2;
   }
 
