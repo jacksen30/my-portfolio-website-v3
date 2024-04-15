@@ -82,28 +82,11 @@ select {
 
 /* Reusable Custom CSS Variables */
 :root {
-  /* Dark Mode (Default) - Theme Colors */
-  /* --darkmode_highlight: #738BF7; */
-  /* --darkmode_highlight: #0066ff; */
-
-  /* --darkmode_highlight: #339900;
-  --darkmode_page-background: #121212;
-  --darkmode_section-background: #0D0D0D; */
-
-  /* Light Mode - Theme Colors */
-  
-  /* --light-mode_highlight: #339900;
-  --light-mode_page-background: #F7F9FC;
-  --light-mode_section-background: #FFF; */
-
+  /* Color Theme is Dark Mode by Default */
   --color_highlight: #339900;
   --color_page-background: #121212;
   --color_section-background: #0D0D0D;
   --color_standard-text: #FFF;
-
-
-  /* Miscellaneous - Colors */
-  /* --color-black: #000; */
 }
 
 :root.light-theme {
@@ -125,6 +108,8 @@ body {
   /* font-weight: 400; */
   color: var(--color_standard-text);
   background-color: var(--color_page-background);
+
+  transition: 500ms;
 }
 
 /* Divs, Containers & buttons - Reusable */
@@ -229,6 +214,10 @@ nav ul li a {
   width: 34px;
   height: 34px;
   border-radius: 20px;
+}
+
+.fa-sun {
+  color: #ea8f06;
 }
 
 .avatar-img {
