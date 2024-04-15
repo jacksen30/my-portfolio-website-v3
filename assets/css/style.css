@@ -85,18 +85,32 @@ select {
   /* Dark Mode (Default) - Theme Colors */
   /* --darkmode_highlight: #738BF7; */
   /* --darkmode_highlight: #0066ff; */
-  --darkmode_highlight: #339900;
+
+  /* --darkmode_highlight: #339900;
   --darkmode_page-background: #121212;
-  --darkmode_section-background: #0D0D0D;
+  --darkmode_section-background: #0D0D0D; */
 
   /* Light Mode - Theme Colors */
-  --light-mode_highlight: #339900;
+  
+  /* --light-mode_highlight: #339900;
   --light-mode_page-background: #F7F9FC;
-  --light-mode_section-background: #FFF;
+  --light-mode_section-background: #FFF; */
+
+  --color_highlight: #339900;
+  --color_page-background: #121212;
+  --color_section-background: #0D0D0D;
+  --color_standard-text: #FFF;
 
 
   /* Miscellaneous - Colors */
-  --color-black: #000;
+  /* --color-black: #000; */
+}
+
+:root.light-theme {
+  --color_highlight: #339900;
+  --color_page-background: #F7F9FC;
+  --color_section-background: #FFF;
+  --color_standard-text: #000;
 }
 
 html {
@@ -109,20 +123,9 @@ body {
   align-items: center;
   font-family: "Inter", sans-serif;
   /* font-weight: 400; */
-
-  color: #FFF;
-  background-color: var(--darkmode_page-background);
+  color: var(--color_standard-text);
+  background-color: var(--color_page-background);
 }
-
-body.light-theme{
-  color: #000000;
-  background-color: var(--light-mode_page-background);
-}
-
-/* .light-theme {
-  color: #000000;
-  background-color: #F7F9FC;
-} */
 
 /* Divs, Containers & buttons - Reusable */
 .main {
@@ -147,14 +150,10 @@ body.light-theme{
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--darkmode_section-background);
+  background-color: var(--color_section-background);
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 15px;
-}
-
-.wrapper.light-theme {
-  background-color: var(--light-mode_section-background);
 }
 
 .wrapper a {
@@ -162,14 +161,12 @@ body.light-theme{
   color: inherit;
 }
 
-
-
 section {
   padding: 2rem 0;
 }
 
 h2 {
-  margin-bottom: 10px;;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -186,7 +183,7 @@ h2 {
 }
 
 .brandname__colored {
-  color: var(--darkmode_highlight);
+  color: var(--color_highlight);
 }
 
 nav {
@@ -207,52 +204,31 @@ nav ul {
 nav ul li {
     list-style: none;
     padding: 5px 10px;
-    background-color: var(--darkmode_section-background);
+    background-color: var(--color_section-background);
     border-radius: 100px;
 
-}
-
-nav ul li.light-theme {
-  background-color: var(--light-mode_section-background);
-}
-
-/* Ensures .nav .current-tab background-color wont be overwritten when theme is toggled to Light-Mode */
-nav ul li.nav__current-tab.light-theme {
-  background: var(--darkmode_highlight);
 }
 
 nav ul li a {
     list-style: none;
     text-decoration: none;
-    color: #FFF;
+    color: var(--color_standard-text);
     font-weight: 500;
 }
 
-nav ul li a.light-theme {
-  color: var(--color-black);
-}
-
 .nav__current-tab {
-  background: var(--darkmode_highlight);
-  color: var(--darkmode_section-background);
+  background: var(--color_highlight);
+  color: var(--color_section-background);
 }
-
-/* nav ul li a.nav__current-tab {
-  background: var(--darkmode_highlight);
-} */
 
 .dark-mode-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--darkmode_section-background);
+  background-color: var(--color_section-background);
   width: 34px;
   height: 34px;
   border-radius: 20px;
-}
-
-.dark-mode-toggle.light-theme {
-  background-color: var(--light-mode_section-background);
 }
 
 .avatar-img {
@@ -265,7 +241,7 @@ nav ul li a.light-theme {
 }
 
 .expanded-bio-desktop-only a {
-  color: var(--darkmode_highlight);
+  color: var(--color_highlight);
   text-decoration: underline;
 }
 
@@ -275,13 +251,9 @@ nav ul li a.light-theme {
 }
 
 .inner-box {
-  background-color: var(--darkmode_page-background);
+  background-color: var(--color_page-background);
   padding: 10px 10px;
   border-radius: 10px;
-}
-
-.inner-box.light-theme {
-  background-color: var(--light-mode_page-background);
 }
 
 .wrapper .inner-box {
@@ -291,8 +263,7 @@ nav ul li a.light-theme {
 
 .github-stats-wrapper {
   padding:10px;
-  background-color: var(--darkmode_section-background);
-  /* background-image: ; */
+  background-color: var(--color_section-background);
 }
 
 .github-stats-wrapper img {
@@ -311,8 +282,6 @@ nav ul li a.light-theme {
 .wrapper.contact-section-home i {
   margin-right: 0.5rem;
 }
-
-
 
 .footer {
   width: 100%;
@@ -333,18 +302,13 @@ nav ul li a.light-theme {
 
 .social-inner-box {
   display: flex;
-  background-color: var(--darkmode_section-background);
+  background-color: var(--color_section-background);
   padding: 10px 30px;
   padding-left: 20px;
   margin-bottom: 10px;
   min-width: 160px;
   border-radius: 15px;
 }
-
-.social-inner-box.light-theme {
-  background-color: var(--light-mode_section-background);
-}
-
 
 .social-inner-box i {
   font-size: 1.5rem;
