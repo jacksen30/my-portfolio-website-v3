@@ -82,11 +82,15 @@ select {
 
 /* Reusable Custom CSS Variables */
 :root {
+  /* Measurments */
+  --width_row-width-percentage: 90%;
+
   /* Color Theme is Dark Mode by Default */
   --color_highlight: #339900;
   --color_page-background: #121212;
   --color_section-background: #0D0D0D;
   --color_standard-text: #FFF;
+  --color_hover-state-box-shadow: rgba(0,255,0,0.5);
 }
 
 :root.light-theme {
@@ -94,6 +98,7 @@ select {
   --color_page-background: #F7F9FC;
   --color_section-background: #FFF;
   --color_standard-text: #000;
+  --color_hover-state-box-shadow: yellow; /* Update this, have just used as placeholde for now */
 }
 
 html {
@@ -119,8 +124,9 @@ body {
 }
 
 .row {
-  width: 85%;
+  width: var(--width_row-width-percentage);
   margin: auto;
+  max-width: 1500px;
 }
 
 .flex-row {
@@ -128,7 +134,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: var(--width_row-width-percentage);
   margin: auto;
 }
 
@@ -160,6 +166,7 @@ h2 {
   justify-content: center;
   padding: 10px 0px 20px 0px;
   width: 100vw;
+  max-width: 1500px;
 }
 
 .brandname {
@@ -173,7 +180,7 @@ h2 {
 
 nav {
   width: 100%;
-  max-width: 335px;
+  max-width: 351.3px;
   margin: 10px 0px;
 }
 
@@ -239,14 +246,10 @@ nav ul li a {
   gap: 10px;
 }
 
-.inner-box {
-  background-color: var(--color_page-background);
-  padding: 10px 10px;
-  border-radius: 10px;
-}
-
 .wrapper .inner-box {
-  padding: 5px 10px;
+  background-color: var(--color_page-background);
+  border-radius: 10px;
+  padding: 10px 10px;
   margin: 5px 5px 5px 0px;
 }
 
@@ -259,8 +262,11 @@ nav ul li a {
   width: 100%;
   max-width: 100%;
   max-height:150px;
- /* object-fit: cover; */ /* Adjust how the content of replaced elements, like <img>, should be resized. */
   border-radius: 10px;
+}
+
+.wrapper.contact-section-home .inner-box {
+  margin-top: 15px;
 }
 
 .wrapper.contact-section-home {
@@ -274,6 +280,7 @@ nav ul li a {
 
 .footer {
   width: 100%;
+  max-width: 1500px;
 }
 
 .footer a {
@@ -363,8 +370,26 @@ i.fa-square-instagram {
   }
 
   .wrapper .inner-box {
-    width: 65%;
+    padding: 7px 10px;
   }
+
+  /* hover states */
+
+  .nav-list li,
+  .dark-mode-toggle,
+  a .inner-box,
+  a .social-inner-box {
+    transition: box-shadow 0.3s;
+  }
+
+  .nav-list li:hover,
+  .dark-mode-toggle:hover,
+  a .inner-box:hover,
+  a .social-inner-box:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color_hover-state-box-shadow);
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
