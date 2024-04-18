@@ -265,14 +265,15 @@ nav ul li a {
   border-radius: 10px;
 }
 
-.wrapper.contact-section-home .inner-box {
-  margin-top: 15px;
-}
-
 .wrapper.contact-section-home {
   width: 100%;
+
   /* Check responsiveness and better implement this element */
-  max-width: 400px; /* Ensures takes up wrapper width on larger mobile viewports eg Iphone 14 pro max */
+ /* max-width: 400px; *//* Ensures takes up wrapper width on larger mobile viewports eg Iphone 14 pro max */
+}
+
+.wrapper.contact-section-home .inner-box {
+  margin-top: 15px;
 }
 
 .wrapper.contact-section-home i {
@@ -295,6 +296,7 @@ nav ul li a {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  gap: 5px 50px; /* ADJJUST THIS */
 }
 
 .social-row a {
@@ -307,12 +309,12 @@ nav ul li a {
   padding: 10px 30px;
   padding-left: 20px;
   margin-bottom: 10px;
-  min-width: 160px;
+  /* min-width: 160px; */
+
+  max-width: 200px;
   border-radius: 15px;
   /* flex: 1 0 50%; */
-  /* flex-grow: 50%; */
-  /* flex: 1 1 50%; */
-  flex: 1 0 50%; /* Other items take up 50% width */
+  flex: 1 0 60px; /* Other items take up 50% width */
 }
 
 .social-inner-box i {
@@ -336,22 +338,10 @@ i.fa-square-instagram {
 a .social-inner-box.fe-mentors {
   flex: 1 0 100%; /* Grow to full width */
 }
-.social-inner-box.fe-mentors {
-  /* width: 332px; */
-  /* width: 600px;
-  max-width: 80%; */
- 
-  /* width: 351.35px; */
-  /* max-width: 100%; */
 
-  /* FIX THE FLEX WRAP ISSUE ON THIS FOR MOBILE */
-  /* flex: 1 0 100%; */ /* Grow to full width */
-  /* align-self: flex-end; */
-  /* flex-grow: 1;
-  width: 100%; */
-  /* display:block;
-  flex: 0 0 100%; */
-  /*flex: 1 0 100%; */ /* Grow to full width */
+.social-inner-box.fe-mentors {
+  max-width: 490px;
+  flex: 1 0 100%;
 }
 
 
@@ -362,6 +352,18 @@ a .social-inner-box.fe-mentors {
 
   .header {
     padding: 20px 0px;
+  }
+
+  .wrapper.contact-section-home {
+    /* width: 100%; */
+  
+    /* Check responsiveness and better implement this element */
+  max-width: 500px; /* Ensures takes up wrapper width on larger mobile viewports eg Iphone 14 pro max */
+  }
+
+  .social-inner-box.fe-mentors {
+    max-width: 315px;
+    flex: 1 0 100%;
   }
 
 }
