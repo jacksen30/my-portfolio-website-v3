@@ -271,7 +271,8 @@ nav ul li a {
 
 .wrapper.contact-section-home {
   width: 100%;
-  max-width: 350px;
+  /* Check responsiveness and better implement this element */
+  max-width: 400px; /* Ensures takes up wrapper width on larger mobile viewports eg Iphone 14 pro max */
 }
 
 .wrapper.contact-section-home i {
@@ -296,6 +297,10 @@ nav ul li a {
   flex-wrap: wrap;
 }
 
+.social-row a {
+  display: flex;
+}
+
 .social-inner-box {
   display: flex;
   background-color: var(--color_section-background);
@@ -305,6 +310,9 @@ nav ul li a {
   min-width: 160px;
   border-radius: 15px;
   /* flex: 1 0 50%; */
+  /* flex-grow: 50%; */
+  /* flex: 1 1 50%; */
+  flex: 1 0 50%; /* Other items take up 50% width */
 }
 
 .social-inner-box i {
@@ -324,13 +332,26 @@ i.fa-square-instagram {
   display: inline-block; /* Needed to apply the gradient correctly */
 }
 
+/* ???? */
+a .social-inner-box.fe-mentors {
+  flex: 1 0 100%; /* Grow to full width */
+}
 .social-inner-box.fe-mentors {
   /* width: 332px; */
-  width: 351.35px;
+  /* width: 600px;
+  max-width: 80%; */
+ 
+  /* width: 351.35px; */
   /* max-width: 100%; */
 
   /* FIX THE FLEX WRAP ISSUE ON THIS FOR MOBILE */
   /* flex: 1 0 100%; */ /* Grow to full width */
+  /* align-self: flex-end; */
+  /* flex-grow: 1;
+  width: 100%; */
+  /* display:block;
+  flex: 0 0 100%; */
+  /*flex: 1 0 100%; */ /* Grow to full width */
 }
 
 
