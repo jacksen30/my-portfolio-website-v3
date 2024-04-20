@@ -94,7 +94,7 @@ select {
 }
 
 :root.light-theme {
-  --color_highlight: #339900;
+  /* --color_highlight: #339900; */
   --color_page-background: #F7F9FC;
   --color_section-background: #FFF;
   --color_standard-text: #000;
@@ -118,10 +118,6 @@ body {
 }
 
 /* Divs, Containers & buttons - Reusable */
-.main {
-  flex-direction: column;
-  max-width: 100%;
-}
 
 .row {
   width: var(--width_row-width-percentage);
@@ -152,9 +148,10 @@ body {
   color: inherit;
 }
 
-section {
+/* Should I use section to be symantically correct ? */
+/* section {
   padding: 2rem 0;
-}
+} */
 
 h2 {
   margin-bottom: 10px;
@@ -180,7 +177,7 @@ h2 {
 
 nav {
   width: 100%;
-  max-width: 351.3px;
+  max-width: 450px;
   margin: 10px 0px;
 }
 
@@ -241,35 +238,20 @@ nav ul li a {
   text-decoration: underline;
 }
 
-.box-stats-wrapper {
-  flex-direction: row;
-  gap: 10px;
-}
-
 .wrapper .inner-box {
   background-color: var(--color_page-background);
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 10px;
   margin: 5px 5px 5px 0px;
 }
 
 .github-stats-wrapper {
-  padding:10px;
+  padding: 10px;
   background-color: var(--color_section-background);
 }
 
 .github-stats-wrapper img {
-  width: 100%;
-  max-width: 100%;
-  max-height:150px;
   border-radius: 10px;
-}
-
-.wrapper.contact-section-home {
-  width: 100%;
-
-  /* Check responsiveness and better implement this element */
- /* max-width: 400px; *//* Ensures takes up wrapper width on larger mobile viewports eg Iphone 14 pro max */
 }
 
 .wrapper.contact-section-home .inner-box {
@@ -280,6 +262,7 @@ nav ul li a {
   margin-right: 0.5rem;
 }
 
+/* group footer rules with other sections */
 .footer {
   width: 100%;
   max-width: 1500px;
@@ -292,7 +275,6 @@ nav ul li a {
 
 .social-row {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
@@ -306,14 +288,12 @@ nav ul li a {
 .social-inner-box {
   display: flex;
   background-color: var(--color_section-background);
-  padding: 10px 30px;
-  padding-left: 20px;
+  padding: 10px 30px 10px 20px;
   margin-bottom: 10px;
   /* min-width: 160px; */
 
   max-width: 200px;
   border-radius: 15px;
-  /* flex: 1 0 50%; */
   flex: 1 0 60px; /* Other items take up 50% width */
 }
 
@@ -342,6 +322,18 @@ a .social-inner-box.fe-mentors {
 .social-inner-box.fe-mentors {
   max-width: 490px;
   flex: 1 0 100%;
+}
+
+.row-2 {
+  gap: 20px;
+}
+
+.row-2 .wrapper {
+  flex: 1;
+}
+
+.row-2 .currently-excited {
+  flex: 1.5;
 }
 
 
