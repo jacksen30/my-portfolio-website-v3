@@ -149,10 +149,6 @@ body {
   color: inherit;
 }
 
-/* Should I use section to be symantically correct ? */
-/* section {
-  padding: 2rem 0;
-} */
 
 h2 {
   margin-bottom: 0.625rem;
@@ -178,7 +174,6 @@ h2 {
 
 nav {
   width: 100%;
-  max-width: 450px;
   margin: 0.625rem 0rem;
 }
 
@@ -259,7 +254,6 @@ nav ul li a {
 }
 
 .github-stats-wrapper {
-  padding: 0.625rem;
   background-color: var(--color_section-background);
 }
 
@@ -329,10 +323,6 @@ i.fa-square-instagram {
 }
 
 @media screen and (min-width: 545px) {
-  .dark-mode-toggle {
-    order: 2;
-  }
-
   .header {
     padding: 1.25rem 0rem;
   }
@@ -343,8 +333,18 @@ i.fa-square-instagram {
 
 }
 
+@media screen and (min-width: 620px) {
+  nav {
+    max-width: 430px
+  }
 
-  @media screen and (min-width: 800px) {
+  .dark-mode-toggle {
+    order: 2;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
 
   .row {
     display: flex;
