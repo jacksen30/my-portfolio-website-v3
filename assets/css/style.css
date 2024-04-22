@@ -245,6 +245,18 @@ nav ul li a {
   margin: 5px 5px 5px 0px;
 }
 
+.row-2 {
+  gap: 20px;
+}
+
+.row-2 .wrapper {
+  flex: 1;
+}
+
+.row-2 .currently-excited {
+  flex: 1.5;
+}
+
 .github-stats-wrapper {
   padding: 10px;
   background-color: var(--color_section-background);
@@ -262,15 +274,10 @@ nav ul li a {
   margin-right: 0.5rem;
 }
 
-/* group footer rules with other sections */
+/* Footer & Social Row Styling */
 .footer {
   width: 100%;
   max-width: 1500px;
-}
-
-.footer a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .social-row {
@@ -278,21 +285,29 @@ nav ul li a {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  gap: 5px 50px;
+  gap: 10px 0px;
 }
 
 .social-row a {
   display: flex;
+  text-decoration: none;
+  color: inherit;
 }
 
 .social-inner-box {
   display: flex;
   background-color: var(--color_section-background);
   padding: 10px 30px 10px 20px;
-  margin-bottom: 10px;
-  max-width: 200px;
   border-radius: 15px;
-  flex: 1 0 60px;
+  width: 162px;
+}
+
+.social-inner-box.fe-mentors {
+  width: 500px;
+}
+
+.social-row a.fe-mentors {
+  max-width: 100%;
 }
 
 .social-inner-box i {
@@ -311,43 +326,6 @@ i.fa-square-instagram {
   color: transparent; /* This makes the text itself transparent, showing the background */
   display: inline-block; /* Needed to apply the gradient correctly */
 }
-
-
-a .social-inner-box {
-  /* display: block; */
-  /* min-width: 170px; */
- /* flex: 1; *//* Grow to full width */
-}
-
-.social-row a {
-  display: flex;
-  flex: 1 0 45%; /* NEEDS UPDATING - ASAP*/
-}
-
-
-a .social-inner-box.fe-mentors {
-  /* flex: 1 0 100%; */ /* Grow to full width */
-  /* flex: 2; */
-}
-
-.social-inner-box.fe-mentors {
-  min-width: unset;
-  max-width: 490px;
-  flex: 1 0 100%;
-}
-
-.row-2 {
-  gap: 20px;
-}
-
-.row-2 .wrapper {
-  flex: 1;
-}
-
-.row-2 .currently-excited {
-  flex: 1.5;
-}
-
 
 @media screen and (min-width: 545px) {
   .dark-mode-toggle {
