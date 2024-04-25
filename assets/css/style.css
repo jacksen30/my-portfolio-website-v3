@@ -332,6 +332,89 @@ i.fa-square-instagram {
   display: inline-block; /* Needed to apply the gradient correctly */
 }
 
+/* SKILLS.HTML PAGE ONLY */
+
+/* .skills-icons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+} */
+.skills-page-title-span {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  gap: 1rem; /*For spacing between fa-star icons and h1 title */
+}
+
+.skills-page-title-span .fa-star {
+  color: var(--color_highlight);
+}
+
+/* Skills Page - Styling */
+.skills-icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 0.5rem;  /* To provide a gap between certificates list on mobile */
+}
+
+
+
+.fa-circle-check {
+  color: #74C0FC;
+  margin-right: 0.5rem;
+}
+
+figure {
+  width: 100%;
+  max-width: 144px;
+  transition: all 300ms;
+}
+
+figcaption {
+  margin: 0;
+  font-size: 1.5rem;
+  transform: scale(0);
+  text-align: center;
+  transition: all 300ms;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  transform: scale(0.9);
+}
+
+figure:hover {
+  filter: brightness(90%);
+  opacity: 0.9;
+  transform: scale(0.9);
+}
+
+.skills-cert-list {
+  list-style: none;
+  padding: 0;
+  /* padding: 0 0 0 5px; */
+}
+
+.skills-cert-list li {
+  padding-bottom: 0.75rem;
+}
+
+.skill-row-1 {
+  max-width: 1500px;
+  justify-content: space-between;
+  /* align-items:center; */
+  gap: 75px;
+}
+
+.skill-row-1 .wrapper,
+.skill-row-2 .social-row,
+.skill-row-2 .contact-section-skills-page {
+  max-width: 550px
+}
+
+
+
 @media screen and (min-width: 545px) {
   .header {
     padding: 1.25rem 0rem;
