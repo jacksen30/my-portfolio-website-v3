@@ -413,6 +413,16 @@ figure:hover {
   max-width: 550px
 }
 
+/* This needs FIXING ASAP */
+/* .social-inner-box .fe-mentors_skill-page {
+  max-width: 350px;
+} */
+
+/* Look at above and below this line */
+.social-row a .fe-mentors_skill-page {
+  width: 100%;
+}
+
 
 
 @media screen and (min-width: 545px) {
