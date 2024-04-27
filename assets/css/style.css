@@ -132,6 +132,7 @@ body {
   max-width: 1500px;
 }
 
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -407,22 +408,10 @@ figure:hover {
   gap: 75px;
 }
 
-.skill-row-1 .wrapper,
-.skill-row-2 .social-row,
-.skill-row-2 .contact-section-skills-page {
-  max-width: 550px
+.social-row a.fe-mentors {
+  width: 390px; /* <-- some issue here nee to fix */
+  /* max-width: 100%; */
 }
-
-/* This needs FIXING ASAP */
-/* .social-inner-box .fe-mentors_skill-page {
-  max-width: 350px;
-} */
-
-/* Look at above and below this line */
-.social-row a .fe-mentors_skill-page {
-  width: 100%;
-}
-
 
 
 @media screen and (min-width: 545px) {
