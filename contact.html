@@ -62,48 +62,50 @@
         </header>
 
 
-        <!-- <main class="main">
+        <main class="main">
             <div class="row">
-                <div class="wrapper hero-box-1">
-                    <img class="avatar-img" src="./assets/images/avatar-resized.avif" alt="Me coding at my computer">
+                <div class="wrapper">
+                    <div class="container">
+                        <h1 class="main-heading">Let's work together.</h1>
+                        <p>Whether you have a project in mind or just simply want to say Hello, don't hesitate to reach out using the contact form below.</p>
+                        <div class="flex">
+
+                            <div class="contact-form-wrapper">
+
+                                <form id="contact-form" method="POST" data-netlify="true" novalidate onSubmit="submit">
+
+                                  <div id="fname-wrapper" class="input-control">
+                                    <label for="fname" class="sr-only">First Name</label>
+                                    <input type="text" name="fname" id="fname" placeholder="Full Name" value="" autofocus>
+                                    <p class="none error-message"><small>Name cannot be empty</small></p>
+                                  </div>
+
+
+                                  <div id="email-wrapper" class="input-control">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Email Address" value="">
+                                    <p class="none error-message"><small>Looks like this is not an email</small></p>
+                                  </div>
+
+                                  <div id="message-wrapper" class="input-control">
+                                    <label for="message-input" class="sr-only">Message</label>
+                                    <textarea name="message" id="message-input" placeholder="Write Your Message Here..." value=""></textarea>
+                                    <p class="none error-message"><small>Message must be a minimum of 80 characters</small></p>
+                                  </div>
+
+                                  <button class="submit-btn" type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+
                 </div>
-                <section id="wrapper" class="wrapper hero-box-2">
-                    <h1>I'm Jacksen,</h1>
-                    <h2>I build exciting things for the web 🚀</h2>
-                    <p>I'm a Front-End Engineer with a passion for delivering clean, modular, and scalable code for exceptional user experiences. I take pride in not only creating visually appealing websites but also building web applications that solve real-world problems.</p>
-                    <p class="expanded-bio-desktop-only">My portfolio showcases a diverse range of <a href="./portfolio.html">projects</a>, each reflecting my commitment to excellence, innovation, and the user experience. I invite you to explore my work, which stands as a testament to my passion for front-end development and my dedication to making a meaningful impact on the web.</p>
-                </section>
+
 
             </div>
-            <div class="row row-2">
-                <section class="wrapper github-stats-wrapper">
-                    <h2>Github Stats</h2>
-                    <img id="github-stat-card" src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=121212&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900" alt="GitHub Streak" />
-                </section>
-                <section class="wrapper currently-excited">
-                    <h2>I'm currently excited to be working on</h2>
-                    <a href="https://geraldtondailydeals.com/" aria-label="A link to the work I've been doing on the Geraldton Daily Deals Platform" target="_blank"><div class="inner-box">🤑 geraldtondailydeals.com</div></a>
-                    <a href="https://quotemkr.com/" aria-label="A link to quotemkr a web app I built using the React framework" target="_blank"><div class="inner-box">📝 quotemkr.com</div></a>
-                    <a href="https://devbyjacksen.com/" aria-label="A link to my current portfolio website, which you are currently viewing" target="_blank"><div class="inner-box">👨‍💻 devbyjacksen.com</div></a>
-                </section>
-                <section class="wrapper contact-section-home">
-                    <h2>Have a project in mind?</h2>
-                    <p>Whether you have a project in mind or just simply want to say Hello, don't hesitate to reach me via:</p>
-                    <a href="./contact.html"><div class="inner-box"><i class="fa-solid fa-envelope"></i>My Contact Form</div></a>
-                </section>
-            </div>
+
         </main>
 
         <footer class="footer">
-            <div class="row">
-                <div class="social-row">
-                    <a href="https://github.com/jacksen30" aria-label="Have a look at my code on Github" target="_blank"><div class="social-inner-box"><i class="fa-brands fa-github"></i>github</div></a>
-                    <a href="https://www.linkedin.com/in/jacksen-nillson/" aria-label="Visit my LinkedIn profile" target="_blank"><div class="social-inner-box"><i class="fa-brands fa-linkedin"></i>linkedin</div></a>
-                    <a href="https://twitter.com/" aria-label="Follow me on Twitter" target="_blank"><div class="social-inner-box"><i class="fa-brands fa-square-x-twitter"></i>twitter</div></a>
-                    <a href="https://www.instagram.com/" aria-label="Follow me on Instagram" target="_blank"><div class="social-inner-box"><i class="fa-brands fa-square-instagram"></i>instagram</div></a>
-                    <a href="https://www.frontendmentor.io/profile/jacksen30" aria-label="Have a look at some of the Front End Mentor Projects I've completed" target="_blank" class="fe-mentors"><div class="social-inner-box fe-mentors"><i class="fa-solid fa-code"></i>front-end mentors - projects</div></a>
-                </div>
-            </div>
-        </footer> -->
+        </footer>
     </body>
 </html>
