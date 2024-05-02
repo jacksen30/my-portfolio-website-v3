@@ -335,10 +335,6 @@ i.fa-square-instagram {
 
 /* SKILLS.HTML PAGE ONLY */
 
-/* .skills-icons-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-} */
 .skills-page-title-span {
   display: flex;
   align-items: center;
@@ -358,8 +354,6 @@ i.fa-square-instagram {
   justify-content: space-around;
   padding-top: 0.5rem;  /* To provide a gap between certificates list on mobile */
 }
-
-
 
 .fa-circle-check {
   color: #74C0FC;
@@ -404,13 +398,37 @@ figure:hover {
 .skill-row-1 {
   max-width: 1500px;
   justify-content: space-between;
-  /* align-items:center; */
-  gap: 75px;
 }
 
 .social-row a.fe-mentors {
   width: 390px; /* <-- some issue here nee to fix */
   /* max-width: 100%; */
+}
+
+/* Refactor - updating to mobile first design */
+
+.outer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-row-1  {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-row-1 {
+  flex: 1;
+}
+
+.skill-row-2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.skill-row-2 .social-row {
+  max-width: 630px; /** NEED TO ADJUST FOR SCREENS UNDER 1600px width APPROX */
+  /* align-items: flex-start; */
 }
 
 
@@ -469,7 +487,7 @@ figure:hover {
   }
 
   /* hover states */
-
+  /* SWAP THESE INTO A HOVER DETECTED DEVICE MEDIA QUIERY */
   .nav-list li,
   .dark-mode-toggle,
   a .inner-box,
@@ -484,6 +502,39 @@ figure:hover {
     cursor: pointer;
     box-shadow: 0 0 15px var(--color_hover-state-box-shadow);
   }
+
+  /* skills page desktop - experimetation stage */
+
+  /* Refactor - updating to mobile first design */
+
+.skill-row-1,
+.skill-row-2  {
+  flex-direction: row;
+  gap: 75px;
+}
+
+.skill-row-1 .wrapper .skills-cert-list {
+  min-width: 600px;
+}
+
+.skill-row-1 .wrapper .skills-icons-wrapper {
+  max-width: 700px;
+}
+
+.skill-row-2 .social-row {
+  align-items: flex-start;
+}
+
+
+/* REFACTOR - curently used to overwrite .wrapper.contact-section-home .inner-box */
+/* Only needs to be refactred or desktop */
+.wrapper.contact-section-home .inner-box-skill-page-contact {
+  margin-top: 0rem;
+}
+
+.main {
+  min-width: 1500px;
+}
 
 }
 
