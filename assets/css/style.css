@@ -429,6 +429,7 @@ figure:hover {
 .skill-row-2 .social-row {
   max-width: 630px; /** NEED TO ADJUST FOR SCREENS UNDER 1600px width APPROX */
   /* align-items: flex-start; */
+  margin-bottom: 25px; /* Adds space at bottom of mobile screens - may need to unset for larger media quiries */
 }
 
 
