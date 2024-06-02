@@ -438,6 +438,13 @@ figure:hover {
   border: 1px solid green;
 } */
 
+.project-cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* fixes card siblings stretching when one card is exapnded issue */
+  gap: 50px;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -445,6 +452,7 @@ figure:hover {
   max-width: 380px;
   border: 2px solid #17BEBB;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .project-card-image-wrapper {
