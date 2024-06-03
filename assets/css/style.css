@@ -434,15 +434,12 @@ figure:hover {
 
 /* Portfolio Page and Project Cards Initial Styling before refactor */
 
-/* .col-portfolio-project-card {
-  border: 1px solid green;
-} */
-
 .project-cards-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* fixes card siblings stretching when one card is exapnded issue */
   gap: 50px;
+  margin-bottom: 50px;
 }
 
 .project-card {
@@ -450,7 +447,8 @@ figure:hover {
   flex-direction: column;
   min-width: 350px;
   max-width: 380px;
-  border: 2px solid #17BEBB;
+  /* border: 2px solid #17BEBB; */
+  border: 2px solid var(--color_highlight);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -464,8 +462,10 @@ overflow: hidden;
 
 .project-card-text-wrapper {
   padding: 5px 5px 5px 10px;
-  background-color: #17BEBB;
-  color: black;
+  /* background-color: #17BEBB; */
+  background-color: var(--color_section-background);
+  /* color: black; */
+  color: var(--color_standard-text);
   border-radius: 0 0 2px 2px;
 }
 
@@ -478,6 +478,7 @@ overflow: hidden;
   color: #1A1A1D;
   padding: 3px 12px 2px 5px;
   border-radius: 6px;
+  border: 1px solid var(--color_standard-text);
 }
 
 .badge-container {
@@ -531,7 +532,7 @@ outline: none;
 width: 240px;
 font-size: 12px;
 padding: 0;
-color: white;
+color: var(--color_standard-text);
 letter-spacing: 1.8px;
 }
 
@@ -615,23 +616,6 @@ height: auto;
     padding: 0.438rem 0.625rem;
   }
 
-  /* hover states */
-  /* SWAP THESE INTO A HOVER DETECTED DEVICE MEDIA QUIERY */
-  .nav-list li,
-  .dark-mode-toggle,
-  a .inner-box,
-  a .social-inner-box {
-    transition: box-shadow 0.3s;
-  }
-
-  .nav-list li:hover,
-  .dark-mode-toggle:hover,
-  a .inner-box:hover,
-  a .social-inner-box:hover {
-    cursor: pointer;
-    box-shadow: 0 0 15px var(--color_hover-state-box-shadow);
-  }
-
   /* skills page desktop - experimetation stage */
 
   /* Refactor - updating to mobile first design */
@@ -686,4 +670,27 @@ height: auto;
     max-width: 80%;
   }
 
+}
+
+@media (hover: hover) {
+  .nav-list li,
+  .dark-mode-toggle,
+  a .inner-box,
+  a .social-inner-box {
+    transition: box-shadow 0.3s;
+  }
+
+  .nav-list li:hover,
+  .dark-mode-toggle:hover,
+  a .inner-box:hover,
+  a .social-inner-box:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color_hover-state-box-shadow);
+  }
+
+  .project-card .button-wrapper a:hover {
+    background-color: var(--color_hover-state-box-shadow);
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color_hover-state-box-shadow);
+  }
 }
