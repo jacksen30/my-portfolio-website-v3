@@ -562,6 +562,36 @@ height: auto;
   border: 2px solid black;
 }
 
+/* Initial Contact Form Styling - Refactor once design is correct */
+
+.contact-form-container {
+  width: 100%;
+}
+
+.contact-form-wrapper .input-control {
+  width: 100%;
+}
+
+.contact-form-wrapper .input-control input,
+.contact-form-wrapper .input-control textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 12px;
+  /* border: 1px solid #ccc; */
+  background-color: var(--color_page-background);
+}
+
+.contact-form-wrapper .submit-btn {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color_highlight);
+  color: var(--color_standard-text);
+  border-radius: 12px;
+}
+
+
+
 @media screen and (min-width: 545px) {
   .header {
     padding: 1.25rem 0rem;
