@@ -578,8 +578,24 @@ height: auto;
   padding: 10px;
   margin: 10px 0;
   border-radius: 12px;
-  /* border: 1px solid #ccc; */
+  border: 2.5px solid var(--color_page-background);
+  color: var(--color_standard-text);
   background-color: var(--color_page-background);
+}
+
+.contact-form-wrapper .input-control input.incorrect,
+.contact-form-wrapper .input-control textarea.incorrect {
+  border: 2.5px solid red;
+  /* consider slighly modifying icon-error svg below to be more of custom error image ? */
+  background: url(../images/icon-error.svg) no-repeat 97%;
+  /* Also consider updating background color of input that has failed validation ? */
+}
+
+.contact-form-wrapper .input-control input:focus-visible,
+.contact-form-wrapper .input-control textarea:focus-visible {
+  outline: none;
+  border: 2.5px solid lightblue;
+
 }
 
 .contact-form-wrapper .submit-btn {
@@ -589,6 +605,24 @@ height: auto;
   color: var(--color_standard-text);
   border-radius: 12px;
 }
+
+/* Move to hoverable devices media query when finished styling */
+.contact-form-wrapper .submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+
+.error-message {
+  text-align: start;
+  color: red;
+  font-size: 0.8rem;
+  padding: 0px 0px 0px 10px;
+}
+
+/* .input-control .none {
+  display: none;
+} */
 
 
 
