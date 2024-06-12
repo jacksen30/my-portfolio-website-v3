@@ -1,19 +1,52 @@
 const root = document.documentElement;
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const darkModeToggleIcon = document.getElementById('dark-mode-toggle-icon');
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleIcon = document.getElementById('theme-toggle-icon');
 const githubStatCard = document.getElementById('github-stat-card');
 
+// Initialize theme from localStorage or set to dark theme if not present
+let theme = localStorage.getItem('theme') || 'dark-theme';
+root.classList.add(theme);
+updateThemeIcon();
+updateGithubStatCardTheme();
 
-darkModeToggle.addEventListener('click', () => {
-    root.classList.toggle('light-theme');
-
-    if (root.classList.contains('light-theme')) {
-        darkModeToggleIcon.classList.remove('fa-moon');
-        darkModeToggleIcon.classList.add('fa-sun');
-        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=F7F9FC&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900&dates=000000";
+function updateThemeIcon() {
+    if (theme === 'dark-theme') {
+        themeToggleIcon.classList.remove('fa-sun');
+        themeToggleIcon.classList.add('fa-moon');
     } else {
-        darkModeToggleIcon.classList.remove('fa-sun');
-        darkModeToggleIcon.classList.add('fa-moon');
-        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=121212&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900";
+        themeToggleIcon.classList.remove('fa-moon');
+        themeToggleIcon.classList.add('fa-sun');
     }
+}
+
+function updateGithubStatCardTheme() {
+    if (theme === 'dark-theme') {
+        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=121212&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900";
+    } else {
+        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=F7F9FC&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900&dates=000000";
+    }
+}
+
+function toggleTheme() {
+    if (theme === 'dark-theme') {
+        theme = 'light-theme';
+        // updateThemeIcon();
+        // updateGithubStatCardTheme();
+    } else {
+        theme = 'dark-theme';
+        // updateThemeIcon();
+        // updateGithubStatCardTheme();
+    }
+    updateThemeIcon();
+    updateGithubStatCardTheme();
+
+    root.className = theme;
+    localStorage.setItem('theme', theme);
+}
+
+
+
+themeToggle.addEventListener('click', () => {
+    toggleTheme();
 });
+
