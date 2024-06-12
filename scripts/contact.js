@@ -76,5 +76,5 @@ form.addEventListener('submit', (event) => {
             // Handle errors, e.g., show error message
             alert('Error submitting the form. Please try again later.');
           });
-      }
+        }
     });

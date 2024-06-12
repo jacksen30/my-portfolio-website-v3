@@ -84,9 +84,12 @@ select {
 :root {
   /* Measurments */
   --width_row-width-percentage: 90%;
-
-  /* Color Theme is Dark Mode by Default */
   --color_highlight: #339900;
+}
+
+:root.dark-theme {
+  /* Color Theme is Dark Mode by Default */
+  /* --color_highlight: #339900; */
   --color_page-background: #121212;
   --color_section-background: #0D0D0D;
   --color_standard-text: #FFF;
@@ -216,7 +219,7 @@ nav ul li a {
   color: var(--color_section-background);
 }
 
-.dark-mode-toggle {
+.theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -649,7 +652,7 @@ textarea {
     max-width: 430px
   }
 
-  .dark-mode-toggle {
+  .theme-toggle {
     order: 2;
   }
 }
@@ -750,14 +753,14 @@ textarea {
 
 @media (hover: hover) {
   .nav-list li,
-  .dark-mode-toggle,
+  .theme-toggle,
   a .inner-box,
   a .social-inner-box {
     transition: box-shadow 0.3s;
   }
 
   .nav-list li:hover,
-  .dark-mode-toggle:hover,
+  .theme-toggle:hover,
   a .inner-box:hover,
   a .social-inner-box:hover {
     cursor: pointer;
