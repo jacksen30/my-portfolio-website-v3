@@ -19,31 +19,22 @@ function updateThemeIcon() {
     }
 }
 
+
 function updateGithubStatCardTheme() {
-    if (theme === 'dark-theme') {
-        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=121212&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900";
-    } else {
-        githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=F7F9FC&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900&dates=000000";
+    if (githubStatCard !== null) {
+        theme === 'dark-theme' ?  githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=121212&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900" : githubStatCard.src="https://streak-stats.demolab.com?user=jacksen30&theme=dark&hide_border=true&border_radius=0&date_format=j%2Fn%5B%2FY%5D&card_width=450&background=F7F9FC&sideNums=339900&currStreakNum=FF8D16&sideLabels=339900&dates=000000";
     }
 }
 
 function toggleTheme() {
-    if (theme === 'dark-theme') {
-        theme = 'light-theme';
-        // updateThemeIcon();
-        // updateGithubStatCardTheme();
-    } else {
-        theme = 'dark-theme';
-        // updateThemeIcon();
-        // updateGithubStatCardTheme();
-    }
+    theme === 'dark-theme' ? theme = 'light-theme' : theme = 'dark-theme';
+
     updateThemeIcon();
     updateGithubStatCardTheme();
 
     root.className = theme;
     localStorage.setItem('theme', theme);
 }
-
 
 
 themeToggle.addEventListener('click', () => {
