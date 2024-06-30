@@ -24,7 +24,7 @@ function checkForElementsRequiringThemingUpdate () {
     }
 
     if (skillsGithubLogo !== null) {
-        theme === 'dark-theme' ?  skillsGithubLogo.src="./assets/images/github-darktheme-logo.png" : skillsGithubLogo.src="./assets/images/github-lighttheme-logo.png";
+        theme === 'dark-theme' ?  skillsGithubLogo.src="./assets/images/skill-icons/github-darktheme-logo.png" : skillsGithubLogo.src="./assets/images/skill-icons/github-lighttheme-logo.png";
     }
 }
 
